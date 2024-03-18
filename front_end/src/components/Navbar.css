@@ -109,7 +109,7 @@ nav {
     color: white;
     cursor: pointer;
     text-decoration: none;
-    background-color: green; /* Make a green color */
+    background-color: green;
   }
 
   .dropdown-menu-button:hover {

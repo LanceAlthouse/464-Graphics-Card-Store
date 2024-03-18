@@ -19,7 +19,7 @@ function MainPage({ lightMode, toggleLightMode }) {
         <div style={{ padding: '20px' }}>
           <Routes>
             <Route path="/cart" element={<Cart />}></Route>
-            <Route path="/products" element={<ProductListings products={GraphicsCards} />}></Route>
+            <Route path="/" element={<ProductListings products={GraphicsCards} />}></Route>
             <Route path="/account" element={<AccountSettings />}></Route>
           </Routes>
         </div>

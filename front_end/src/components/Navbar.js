@@ -25,7 +25,7 @@ function Navbar({ lightMode, toggleLightMode }) {
             <ThemeSwitchButton lightMode={lightMode} toggleLightMode={toggleLightMode} />
           </li>
           <li>
-            <Link to="/products" className='nav-list-item'><button className="nav-button"><FontAwesomeIcon icon={faBoxOpen} /> Products</button></Link>
+            <Link to="/" className='nav-list-item'><button className="nav-button"><FontAwesomeIcon icon={faBoxOpen} /> Products</button></Link>
           </li>
           <li>
             <Link to="/account" className='nav-list-item'><button className="nav-button"><FontAwesomeIcon icon={faUser} /> Account</button></Link>
@@ -43,7 +43,7 @@ function Navbar({ lightMode, toggleLightMode }) {
       {showDropdown && (
         <ul className="dropdown-menu">
           <li>
-            <Link to="/products" className='nav-list-item'><button className="dropdown-button"><FontAwesomeIcon icon={faBoxOpen} /> Products</button></Link>
+            <Link to="/" className='nav-list-item'><button className="dropdown-button"><FontAwesomeIcon icon={faBoxOpen} /> Products</button></Link>
           </li>
           <li>
             <Link to="/account" className='nav-list-item'><button className="dropdown-button"><FontAwesomeIcon icon={faUser} /> Account</button></Link>
