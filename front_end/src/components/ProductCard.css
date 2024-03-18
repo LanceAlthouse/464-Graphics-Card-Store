@@ -1,0 +1,54 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.quantity-input{
+  display: flex;
+  gap: 5px;
+  padding-bottom: 15px;
+}
+
+.quantity-input input{
+  width: 50px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.quantity-input button{
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  background-color: green;
+}
+
+.quantity-input button:hover{
+  background-color: darkgreen;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.buy-button:hover {
+  background-color: darkgreen;
+}
+
+p {
+  margin: 0;
+}

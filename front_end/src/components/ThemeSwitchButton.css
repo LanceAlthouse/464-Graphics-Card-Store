@@ -1,0 +1,10 @@
+.nav-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faShoppingCart, faUser, faBoxOpen, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faUser, faBoxOpen, faBars } from '@fortawesome/free-solid-svg-icons';
 import ThemeSwitchButton from './ThemeSwitchButton';
 import siteLogo from '../assets/images/siteLogo.png';
 import './Navbar.css';
@@ -21,32 +22,19 @@ function Navbar({ lightMode, toggleLightMode }) {
         </div>
         <ul className="nav-links">
           <li>
-            <button className="nav-button" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', width: '100%' }}>
-              <ThemeSwitchButton lightMode={lightMode} toggleLightMode={toggleLightMode} />
-            </button>
+            <ThemeSwitchButton lightMode={lightMode} toggleLightMode={toggleLightMode} />
           </li>
           <li>
-            <button className="nav-button" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', width: '100%' }}>
-              <a href="/" className='nav-list-item'> <FontAwesomeIcon icon={faHome} /> Home</a>
-            </button>
+            <Link to="/products" className='nav-list-item'><button className="nav-button"><FontAwesomeIcon icon={faBoxOpen} /> Products</button></Link>
           </li>
           <li>
-            <button className="nav-button" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', width: '100%' }}>
-              <a href="/products" className='nav-list-item'><FontAwesomeIcon icon={faBoxOpen} /> Products</a>
-            </button>
+            <Link to="/account" className='nav-list-item'><button className="nav-button"><FontAwesomeIcon icon={faUser} /> Account</button></Link>
           </li>
           <li>
-            <button className="nav-button" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', width: '100%' }}>
-              <a href="/account" className='nav-list-item'><FontAwesomeIcon icon={faUser} /> Account</a>
-            </button>
-          </li>
-          <li>
-            <button className="nav-button" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', width: '100%' }}>
-              <a href="/cart" className='nav-list-item'> <FontAwesomeIcon icon={faShoppingCart} /> Cart</a>
-            </button>
+            <Link to="/cart" className='nav-list-item'><button className="nav-button"><FontAwesomeIcon icon={faShoppingCart} /> Cart</button></Link>
           </li>
           <li className="dropdown-toggle" >
-            <button className="dropdown-menu-button" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', width: '100%' }} onClick={handleDropdownToggle}>
+            <button className="dropdown-menu-button" onClick={handleDropdownToggle}>
               <FontAwesomeIcon icon={faBars} />
             </button>
           </li>
@@ -55,24 +43,13 @@ function Navbar({ lightMode, toggleLightMode }) {
       {showDropdown && (
         <ul className="dropdown-menu">
           <li>
-            <button className="dropdown-button">
-              <a href="/" className='nav-list-item'><FontAwesomeIcon icon={faHome} /> Home</a>
-            </button>
+            <Link to="/products" className='nav-list-item'><button className="dropdown-button"><FontAwesomeIcon icon={faBoxOpen} /> Products</button></Link>
           </li>
           <li>
-            <button className="dropdown-button">
-              <a href="/products" className='nav-list-item'><FontAwesomeIcon icon={faBoxOpen} /> Products</a>
-            </button>
+            <Link to="/account" className='nav-list-item'><button className="dropdown-button"><FontAwesomeIcon icon={faUser} /> Account</button></Link>
           </li>
           <li>
-            <button className="dropdown-button">
-              <a href="/account" className='nav-list-item'><FontAwesomeIcon icon={faUser} /> Account</a>
-            </button>
-          </li>
-          <li>
-            <button className="dropdown-button">
-              <a href="/cart" className='nav-list-item'><FontAwesomeIcon icon={faShoppingCart} /> Cart</a>
-            </button>
+            <Link to="/cart" className='nav-list-item'><button className="dropdown-button"><FontAwesomeIcon icon={faShoppingCart} /> Cart</button></Link>
           </li>
         </ul>
       )}

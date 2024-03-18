@@ -1,3 +1,8 @@
+button, ul {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   padding: 10px;
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
@@ -33,10 +38,11 @@ nav {
 .nav-list-item {
   cursor: pointer;
   text-decoration: none;
+  color: white;
 }
 
 .nav-list-item:visited {
-  color: inherit;
+  color: white;
 }
 
 .nav-list-item:hover,
@@ -50,10 +56,15 @@ nav {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: inherit;
-  background-color: green; /* Make a green color */
+  color: white;
+  background-color: green;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   width: 100%;
+}
+
+.nav-button:hover {
+  background-color: darkgreen;
+  scale: 1.1;
 }
 
 
@@ -76,11 +87,17 @@ nav {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: inherit;
-  background-color: green; /* Make a green color */
+  color: white;
+  background-color: green;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
+
+.dropdown-button:hover {
+  background-color: darkgreen;
+  scale: 1.02;
+}
+
 
 
 @media (max-width: 950px) {
@@ -89,10 +106,15 @@ nav {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    color: inherit;
+    color: white;
     cursor: pointer;
     text-decoration: none;
     background-color: green; /* Make a green color */
+  }
+
+  .dropdown-menu-button:hover {
+    background-color: darkgreen;
+    scale: 1.1;
   }
 
   .nav-button {

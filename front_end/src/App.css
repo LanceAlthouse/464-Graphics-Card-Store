@@ -1,6 +1,6 @@
 /* Prevents white borders on the right and top sides of the screen */
 html, body {
-  overflow-x:hidden;
+  overflow-y:auto;
 }
 
 .light-mode {
